@@ -1,0 +1,43 @@
+// .container
+//   height: 100vh
+//   overflow-y: scroll
+  
+// .content--wrapper
+//   background-color: $white
+//   position: relative
+
+.dashboard
+  min-height: calc(100vh - #{($header-height + 187px)})
+
+.layout
+
+  &--sidebar
+
+    &--left
+      +device(desktop-up)
+        grid-template-columns: minmax(max-content, 20%) 1fr
+        grid-template-areas: 'a b'
+
+    &--right
+      +device(desktop-up)
+        grid-template-columns: 1fr minmax(max-content, em(300))
+        grid-template-areas: 'b a'
+
+
+.sidebar
+
+  > .wrapper
+    color: $white
+    background-color: $prime
+    border-radius: em(20)
+
+  input
+    background-color: $white
+
+  +device(desktop-up)
+    grid-area: a
+
+.content
+
+  +device(desktop-up)
+    grid-area: b

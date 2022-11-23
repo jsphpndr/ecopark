@@ -1,0 +1,14 @@
+-
+  pages = [
+    {page: 'Intake Forms', link:'/intake-forms', current: ''},
+    {page: 'Daily Reports', link: '/daily-reports', current: ''}
+  ]
+
+
+nav(class='[ sidebar ]')
+
+  ul(class='[ main-nav ]')
+    each item, page in pages 
+
+      li(class='[ main-nav__item ]')
+        a(class='[ main-nav__link ]' href=item.link)= item.page

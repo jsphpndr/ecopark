@@ -1,0 +1,72 @@
+*, *::before, *::after
+  box-sizing: border-box
+
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd
+  margin: 0
+
+ol, ul
+  margin: 0
+  padding: 0
+
+  &:not([class])
+    padding-bottom: 0.75em
+
+  &[class]
+    list-style: none
+
+ol:not([class])
+  margin-left: 1.5em
+
+ul:not([class])
+  margin-left: 1em
+
+nav > ul, nav > ul:not([class])
+  margin: 0
+  padding: 0
+  list-style: none
+
+a
+  text-decoration: none
+
+address
+  font-style: normal
+
+blockquote, q
+  quotes: none
+
+blockquote
+
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+input, button, textarea, select
+  font: inherit
+
+button
+  background-color: rgba($white,0)
+  border: none
+  padding: 0
+  cursor: pointer
+
+@media (prefers-reduced-motion: reduce)
+  *
+    animation-duration: 0.01ms !important
+    animation-iteration-count: 1 !important
+    transition-duration: 0.01ms !important
+    scroll-behavior: auto !important
+
+    &::before, &::after
+      animation-duration: 0.01ms !important
+      animation-iteration-count: 1 !important
+      transition-duration: 0.01ms !important
+      scroll-behavior: auto !important

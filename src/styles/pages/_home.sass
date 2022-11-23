@@ -1,0 +1,58 @@
+.fixed-banner
+  min-height: 100vh
+  position: relative
+  overflow: hidden
+  color: $white
+
+
+  &__wrap
+    width: 100%
+    min-height: 100vh
+    clip: rect(0, auto, auto, 0)
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    transform: scaleX(-1)
+
+    .bg
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+
+    > .img, .bg
+      display: block
+      width: 100%
+      min-height: inherit
+      position: fixed
+      top: 0
+      left: 0
+      transform: translateZ(0)
+      will-change: transform
+
+  &__heading
+    +fluid(font-size, 47, 52)
+
+  &__overlay
+    width: 100%
+    min-height: inherit
+    // overflow: hidden
+    background: rgba(0, 0, 0, 0.5)
+
+    > .content
+      min-height: inherit
+      // overflow: inherit
+      position: relative
+  
+  .btn:first-of-type
+    margin-right: 1em
+
+  .btn--primary
+    color: black
+    background-color: $white
+    background-position: center
+    transition: background 0.8s
+
+    &:hover
+      color: #767676
+

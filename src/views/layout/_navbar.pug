@@ -1,0 +1,24 @@
+
+-
+  menu = [
+    {page:'Logout', link:'/login'},
+    ]
+
+header#navbar(class=(solid ? '[ navbar navbar--solid ]': '[ navbar ]'))
+
+  div(class='[ wrapper ] [ x--wide--p flex--between--middle ]')
+
+    a(class='[ logo ] [ block font--500 font--4 ]' href='/') New Providence Ecology Park
+      //- - var logo = 'logo'
+      //- include ../graphics/_logo
+
+    label#navicon(for='click' class='[ navicon ] [ flex--middle ]')
+      strong#menu-prompt(class='[ hidden ]') Menu
+      b(class='[ bar ] [ block ]')
+
+
+    nav(class='[ menu menu--main ]')
+      ul(class='[ flex ]')
+        each item, i in menu
+          li(class='[ menu__item ]')
+            a(class=`[ menu__link ] ${ (menu ? `[ ${item.current} ]` : false ) }`, href= item.link)= item.page

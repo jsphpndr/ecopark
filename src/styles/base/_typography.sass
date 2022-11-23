@@ -1,0 +1,60 @@
+h1, h2, h3, h4, h5, h6
+  color: $second
+  font-family: 'Great Vibes'
+  font-weight: 700
+  line-height: 1.15
+  padding-bottom: 0.25em
+  // text-transform: capitalize
+
+  // &:not([class])
+  //   color: #3e3e3e
+
+@if $max-font-size == 20
+
+  h1,.font--1
+    +fluid(font-size, 32, 52)
+
+  h2,.font--2
+    +fluid(font-size, 37, 41)
+
+  h3,.font--3
+    +fluid(font-size, 29, 32)
+
+  h4,.font--4
+    +fluid(font-size, 23, 25)
+
+  h5,.font--5
+    +fluid(font-size, 18, 20)
+
+  h6,.font--6
+    +fluid(font-size, 14, 16)
+
+@else
+
+  h1,.font--1
+    +fluid(font-size, 42, 47)
+
+  h2,.font--2
+    +fluid(font-size, 33, 37)
+
+  h3,.font--3
+    +fluid(font-size, 26, 29)
+
+  h4,.font--4
+    +fluid(font-size, 20, 23)
+
+  h5,.font--5
+    +fluid(font-size, 16, 18)
+
+  h6,.font--6
+    +fluid(font-size, 13, 14)
+    // font-size: em(14)
+
+
+p
+  padding-bottom: 1em
+  
+
+small, .small
+  font-size: 0.8em
+  line-height: 1.5

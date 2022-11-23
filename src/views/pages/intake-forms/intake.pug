@@ -1,0 +1,84 @@
+extends ../../layout/_layout
+
+block var 
+
+  - title = "Intake Forms"
+
+block content
+
+  //- Date
+  
+  //- Time
+  //- Waste
+  //- Vendor
+  //- Tonnage
+  //- Receiver
+
+
+  form.form(action="")
+    -
+      companies = [
+        {name: 'Dumping Company, Ltd.'},
+        {name: 'Throw Your Trash Away, Ltd.'},
+        {name: 'We Love Jakayla Trash Collection, Ltd.'},
+        {name: 'Tamarind Waste Collection'},
+
+      ]
+
+    -
+      destinations = [
+        {area: 'MSW Face'},
+        {area: 'Small Vehicles'},
+        {area: 'Green Waste'},
+        {area: 'C&D'},
+        {area: 'Tires'},
+        {area: 'Medical'},
+        {area: 'Asbestos/Hazmat'},
+        {area: 'PCS'},
+
+      ]
+    -
+      vehicles = [
+        {type: 'Garbage'},
+        {type: 'Rolloff'},
+        {type:'Dump'},
+        {type: 'Flatbad'},
+        {type: 'Trailer'},
+        {type: 'Pickup'},
+        {type: 'Van'},
+
+      ]
+
+    
+
+    .flex--col.mb--1
+      label.mb--025(for="company") Company
+      select#companies.form__input.w--100.px--050.py--025(name="companies")
+        option() Select Company
+        each item, company in companies
+          option(value="")= item.name
+
+    .grid.x2--md.gc--2.gr--1
+
+      +input('driver', 'Driver', 'text', 'John Doe')
+
+      +input('plate', 'License Plate', 'text', 'AB1234')
+
+      .form__field.flex--col
+        label.form__label.mb--025(for="vehicles") Vehicles 
+        select#vehicles.form__input.w--100.px--050.py--025(name="vehicles")
+          each item, vehicle in vehicles
+            option(value="")= item.type
+
+      .form__field.flex--col
+        label.form__label.mb--025(for='waste_type') Waste Type
+        select#waste_type.form__input.w--100.px--050.py--025(name="waste_type")
+          each item, destination in destinations 
+            option(value="")= item.area  
+
+
+      +input('time', 'Time', 'time', '8:00AM')
+
+      +input('date', 'Date', 'date', '12/01/22')
+
+      +input('weight', 'Tonnange (lbs)', 'number', '1500')

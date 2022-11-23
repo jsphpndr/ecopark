@@ -1,0 +1,54 @@
+%btn
+  font-weight: 500
+  display: inline-block
+  border-radius: 2em
+  margin-bottom: 0.5em
+  margin-top: 0.5em
+  // text-transform: uppercase
+  white-space: nowrap
+
+.btn
+  @extend %btn
+
+  &--prime
+    color: $white
+    background: $prime
+
+  &--solid
+
+    &--sm
+      // @extend .btn--solid
+      padding: 0.5em 1.5em
+
+    &--lg
+      // @extend .btn--solid
+      padding: 0.75em 2em
+
+  &--ghost
+    background: transparent
+    border: em(3) solid $white
+    color: $white
+
+    &:hover
+      color: #767676
+      background: $white
+
+    &--sm
+      @extend .btn--ghost
+      font:
+        size: 1rem
+      padding: (0.35em - em(3)) (1em - em(3))
+
+    &--lg
+      @extend .btn--ghost
+      padding: (0.75em - em(3)) (2em - em(3))
+      // text-transform: uppercase
+
+  &--white
+    // border-color: $white
+    color: $second
+    background: $white
+
+  &--dark
+    color: $btn-primary
+    border-color:  #d4d4d4

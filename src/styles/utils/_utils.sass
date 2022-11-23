@@ -1,0 +1,288 @@
+// Display
+
+.block
+  display: block
+
+.inline
+  display: inline
+
+.in-bl
+  display: inline-block
+
+// Font Case
+
+.text--lower
+  text-transform: lowercase
+
+.text--caps
+  text-transform: capitalize
+
+.text--upper
+  text-transform: uppercase
+
+// Font Weight
+
+.font--light
+  font-weight: lighter
+  
+.font--reg
+  font-weight: normal
+
+.font--bold
+  font-weight: bold
+
+@for $weight from 3 through 9
+
+  .font
+    &--#{$weight * 100}
+      font-weight: ($weight * 100)
+
+
+@for $percent from 1 through 10
+
+  .w--#{$percent}0
+    width: $percent + '0%'
+    max-width: $percent + '0%'
+
+  .w--#{$percent}5
+    width:  $percent + '5%'
+    max-width:  $percent + '5%'
+
+// Text Decoration
+
+.strike
+  text-decoration: line-through
+
+// Positioning
+
+.sticky
+  position: sticky
+  top: 2em
+
+.fixed
+  position: fixed
+
+// Margins
+
+.x--auto
+  margin-left: auto
+  margin-right: auto
+
+@for $h from 20 through 54
+
+  .ch--#{$h}
+    max-width: #{$h}ch
+
+$zero: 0
+
+@for $i from 1 through 100
+  
+  $units: (#{$zero}#{$i}: #{$i / 100}em, $i: #{$i}em, d#{$i}: #{$i / 10}em)
+
+  @each $class, $unit in $units
+
+    // Padding
+    .p
+      &--#{$class}
+        padding: $unit
+    
+    .pt 
+      &--#{$class}
+        padding-top: $unit
+
+    .pr
+      &--#{$class}
+        padding-right: $unit
+
+    .pb
+      &--#{$class}
+        padding-bottom: $unit
+
+    .pl
+      &--#{$class}
+        padding-left: $unit
+
+    .px
+      &--#{$class}
+        padding-right: $unit
+        padding-left: $unit
+    
+    .py
+      &--#{$class}
+        padding-top: $unit
+        padding-bottom: $unit
+
+    // Margin
+
+    .m
+      &--#{$class}
+        margin: $unit
+    
+    .mt
+      &--#{$class}
+        margin-top: $unit
+
+    .mr
+      &--#{$class}
+        margin-right: $unit
+
+    .mb
+      &--#{$class}
+        margin-bottom: $unit
+
+    .ml
+      &--#{$class}
+        margin-left: $unit
+
+    .mx
+      &--#{$class}
+        margin-right: $unit
+        margin-left: $unit
+    
+    .my
+      &--#{$class}
+        margin-top: $unit
+        margin-bottom: $unit
+
+
+// Padding
+.p
+  &--0
+    padding: 0
+
+.pt
+  &--0
+    padding-top: 0
+
+.pr
+  &--0
+    padding-right: 0
+
+.pb
+  &--0
+    padding-bottom: 0
+
+.pl
+  &--0
+    padding-left: 0
+
+.px
+  &--0
+    padding-right: 0
+    padding-left: 0
+
+.py
+  &--0
+    padding-top: 0
+    padding-bottom: 0
+
+
+// Margin
+
+.m
+  &--0
+    margin: 0
+
+.mt
+  &--0
+    margin-top: 0
+
+.mr
+  &--0
+    margin-right: 0
+
+.mb
+  &--0
+    margin-bottom: 0
+
+.ml
+  &--0
+    margin-left: 0
+
+.mx
+  &--0
+    margin-right: 0
+    margin-left: 0
+
+.my
+  &--0
+    margin-top: 0
+    margin-bottom: 0
+
+@for $o from 1 through 10
+  .o--#{$o}
+    order: $o
+
+@for $i from 1 through 100
+
+  $units: (#{$zero}#{$i}: #{$i / 100}em, $i: #{$i}em, d#{$i}: #{$i / 10}em)
+
+  @each $gap, $unit in $units
+    .g--#{$gap}
+      gap: $unit
+
+    .gc--#{$gap}
+      column-gap: $unit
+    
+    .gr--#{$gap}
+      row-gap: $unit
+
+.px--full
+  +fluid(('padding-right','padding-left'), 16, 40)
+
+.text
+
+  &--left
+    text-align: left
+
+  &--center
+    text-align: center
+
+  &--right
+    text-align: right
+
+.hidden
+  width: 0
+  height: 0
+  overflow: hidden
+  visibility: hidden
+  position: absolute
+  top: 0
+  left: -999rem
+  z-index: -999
+
+.video
+  min-width: 100%
+  max-width: 100%
+  min-height: 100%
+  max-height: 100%
+  background-color: $black
+  object-fit: cover
+
+.line
+  height: em(1)
+
+  &--white
+    background-color: #979797
+
+.bg
+  background:
+    repeat: no-repeat
+    position: center
+    size: cover
+
+@for $o from 1 through 10
+  .o--#{$o}
+    order: $o
+
+.wsnw
+  white-space: nowrap
+
+.h--100
+  height: 100vh
+
+.w--100
+  width: 100%
+
+.vh--100
+  height: 100vh

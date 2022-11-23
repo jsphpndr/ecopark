@@ -1,0 +1,64 @@
+.contact
+
+  &__area
+    +fluid(grid-column-gap, 0, 40)
+    +fluid(gap, 0, 40)
+
+    @media (max-width: 1024px)
+      display: block
+
+.salon
+  grid-template-columns: min-content 1fr em(250)
+  grid-template-rows: repeat(2, min-content)
+  
+  @media (max-width: 1024px)
+    display: none
+
+  &__img
+    grid-column: 1 / 4
+    +img
+
+  &__address, &__contacts
+    grid-column: 1/2
+
+  &__hours, &__follow
+    grid-column: 3/4
+
+  
+
+  h2
+    +fluid(font-size, 23, 25)
+    padding-bottom: 0.5em
+
+.hours
+  // width: 100%
+  line-height: 1.4
+
+  thead tr th
+    height: 0
+    font-size: 1px
+    line-height: 1
+    padding: 0
+    visibility: hidden
+    overflow: hidden
+
+  
+  tr
+    
+    // th, td
+    //   width: 50%
+
+    th
+      width: 25%
+      // white-space: nowrap
+      text-align: left
+
+    td
+      padding-left: 1em
+
+    // &:nth-of-type(2)
+    //   text-align: right
+      
+.map
+  height: em(300)
+  background: blue

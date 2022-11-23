@@ -1,0 +1,140 @@
+.navbar
+  height: $header-height
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 10
+
+  > .wrapper
+    height: inherit
+
+  &--solid
+    background-color: $second
+
+// .navicon
+//   width: em(30)
+//   height: em(25)
+//   position: relative
+//   z-index: 2
+//   cursor: pointer
+
+//   +device(desktop-up)
+//     display: none
+
+// .bar
+//   width: inherit
+//   height: em(2)
+//   background-color: $white
+//   border-radius: em(1)
+//   position: relative
+//   +transition('transform')
+
+//   &::before, &::after
+//     content: ''
+//     width: inherit
+//     height: inherit
+//     background-color: inherit
+//     border-radius: inherit
+//     position: absolute
+//     right: 0
+//     z-index: 1
+  
+//   &::before
+//     top: em((25 / 2) - 1.5)
+//     +transition('top, opacity')
+
+//   &::after
+//     bottom: em((25 / 2) - 1.5)
+//     +transition('bottom, transform') 
+
+
+// .menu
+  
+//   +device(tablet-or-less)
+
+//     &--main
+
+//       width: 100vw
+//       height: 100vh
+//       background-color: $second
+//       // visibility: hidden
+//       position: absolute
+//       top: 0
+//       left: -100vw
+//       z-index: -1
+//       +transition('left')
+
+//       > ul
+//         height: 100%
+//         flex-direction: column
+//         align-items: center
+//         justify-content: center
+      
+//   &__item
+//     margin-left: 0
+    
+//     +device(tablet-or-less)
+//       padding:
+//         bottom: 1em
+//         top: 1em
+
+//       &:first-of-type
+//         padding-top: 2em
+
+//       &:last-of-type
+//         padding-bottom: 2em
+
+//     +device(desktop-up)
+//       margin-left: 1em
+//       position: relative
+
+
+//   &__link
+//     color: $white
+//     font-weight: 700
+//     position: relative
+//     transition-property: opacity
+
+//     +device(tablet-or-less)
+//       color: $white
+
+//     &:hover
+      
+//       &::before, &::after
+//         opacity: 1
+
+//     &.current
+      
+//       &::before, &::after
+//         opacity: 1
+
+// // https://codepen.io/Raduga61/pen/qoXxqg
+  
+// +device(tablet-or-less)
+   
+//   #click:checked + .container
+//     overflow: hidden
+
+//     .menu--main
+//       left: 0
+    
+//     .bar
+//       transform: rotate(225deg)
+    
+//       &::before
+//         top: 0
+//         opacity: 0
+
+//       &::after
+//         bottom: 0
+//         transform: rotate(-90deg)
+
+// .logo
+//   color: $white
+//   width: em(150)
+//   fill: $white
+//   transition-property: fill
+
+//   > svg
+//     width: inherit

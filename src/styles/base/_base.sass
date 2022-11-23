@@ -1,0 +1,74 @@
+html
+  box-sizing: border-box
+  text-rendering: optimizeSpeed
+  -webkit-font-smoothing: antialiased
+  // iOS only
+  -webkit-overflow-scrolling: touch
+  -webkit-tap-highlight-color: rgba(black, 0)
+  scroll-behavior: smooth
+  +interpolate(font-size, $min-viewport-width-in-px, $max-viewport-width-in-px, $min-font-size-in-px, $max-font-size-in-px)
+  
+html[overflow]
+  // height: 100%
+  overflow-x: hidden
+
+body
+  color: $black
+  // background: darken(#fff, 3%)
+  overflow-x: hidden
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-weight: 400
+  line-height: 1.5
+  accent-color: $second
+
+$link: $second
+
+a:not([class])
+  color: $link
+  background-color: rgba($link, 0)
+  border-bottom: em(2) solid $link
+  +transition('background-color, border-bottom')
+
+  &:hover
+    background-color: rgba($link, 0.1)
+    // border-bottom: 1px solid rgba($link, 1)
+
+img, svg
+  display: block
+  width: 100%
+  max-width: 100%
+  height: auto
+
+figcaption
+  color: grey
+  font-size: 0.7em
+  padding-top: 0.5rem
+
+
+::selection
+  color: $white
+  background-color: $second
+
+.hidden
+  width: 0
+  height: 0
+  font-size: 1px
+  overflow: hidden
+  visibility: hidden
+  position: absolute
+  top: 0
+  left: -9999rem
+  z-index: -999
+
+
+.ratio4\:5
+  padding-top: percentage(5 / 4)
+
+  position: relative
+  
+  > img
+    height: 100%
+    object-fit: cover
+    position: absolute
+    top: 0
+    left: 0

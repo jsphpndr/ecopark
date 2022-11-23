@@ -1,0 +1,61 @@
+// References:
+// https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4
+// https://github.com/HugoGiraudel/sass-boilerplate/tree/master/stylesheets
+
+// @charset 'utf-8'
+// Configuration and helpers
+@import utils/var
+@import utils/functions
+@import utils/mixins
+@import utils/utils
+
+// Fonts
+@import base/fonts
+
+// Vendors
+@import vendor/reset
+
+// Base
+@import base/base
+@import base/_grid
+@import base/site-widths
+@import base/typography
+
+// Layout
+@import layout/navbar
+@import layout/layout
+@import layout/footer
+
+
+//Partials
+// @import partials/article-list
+@import partials/sidebar
+@import partials/_table
+// @import partials/_hero
+// Blog Loop
+@import partials/_loop
+// FAQ
+// @import partials/_faq
+
+// Components
+// @import components/featured
+@import components/button
+@import components/breadcrumbs
+@import components/testimonials
+// @import components/quote
+@import components/social
+@import components/paginate
+// @import components/_contact-form
+@import components/contact-form
+
+
+// Pages
+@import pages/home
+@import pages/_contact
+// @import pages/article
+// @import pages/_home
+@import pages/_post
+
+/* uncss:ignore start */
+// @import vendor/prism
+/* uncss:ignore end */

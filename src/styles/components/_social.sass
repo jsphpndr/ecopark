@@ -1,0 +1,60 @@
+.social
+
+  &__item
+    width: 0.9rem
+    margin-right: 0.65rem
+
+    &:last-of-type
+      margin-right: 
+      
+#copyLink
+  height: 0.9rem
+  position: relative
+
+  > svg
+    height: inherit
+  
+  background-color: rgba(#000, 0)
+  padding: 0
+  border: none
+  -webkit-appearance: none
+  cursor: pointer
+  position: relative
+
+  &::before, &::after
+    color: $second
+    background-color: $prime
+    position: absolute
+    visibility: hidden
+    opacity: 0
+    // +transition('visibility, opacity')
+    // transition: 1500ms ease-in-out
+    // transition-property: visibility, opacity
+    // will-change: visibility, opacity
+
+  &::after
+    content: ''
+    width: em(10)
+    height: em(10)
+    top: em(25)
+    left: 25%
+    transform: rotate(45deg)
+
+  &::before
+    content: 'Copied!'
+    font-size: 0.8em
+    padding: em(4) em(10)
+    border-radius: em(15)
+    top: em(35)
+    left: 50%
+    transform: translateX(-50%)
+
+  &.copied
+
+    &::before, &::after
+      display: block
+      visibility: visible
+      opacity: 1
+
+
+

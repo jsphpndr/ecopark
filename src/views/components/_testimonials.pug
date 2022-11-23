@@ -1,0 +1,15 @@
+ul(class='[ testimonials ] [ x--wide grid ]')
+
+  - t = 0;
+  while t++ < 3
+  
+    li(class='[ testimonial ] [ flex ]')
+      
+      blockquote(class='[ testimony ]') 
+        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur explicabo veniam quae doloremque corporis, dignissimos eos suscipit blanditiis ipsum? Eligendi aliquid magnam magni quia iusto.
+      
+        footer
+          cite(class='[ author ]') Some Person
+
+      figure(class='[ author__img ] [ mb--1 ]')
+        +img('', 'Some Person')

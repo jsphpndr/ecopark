@@ -1,0 +1,52 @@
+.testimonials
+  @media(min-width: 750px)
+    grid-template-columns: repeat(6, 1fr)
+    grid-template-rows: repeat(auto-fill, min-content)
+    row-gap: 2em
+
+.testimonial
+
+  @media(min-width: 750px)
+
+    &:nth-of-type(odd)
+      grid-column: 1 / 5
+
+    &:nth-of-type(even)
+      grid-column: 3 / 7
+
+  @media(max-width: 749px)
+    flex-direction: column
+    align-items: center
+
+.testimony
+  order: 2
+
+  @media(max-width: 749px)
+    text-align: center
+
+    footer
+      text-align: inherit
+
+.author
+
+  &::before
+    content: '—'
+    font-size: inherit
+    margin-right: 1em
+
+  &__img
+    width: em(100)
+    min-width: em(100)
+    height: em(100)
+    border-radius: 50%
+    order: 1
+
+    @media(min-width: 750px)
+      margin-right: 1em
+
+    background-color: green
+
+    > .img
+      height: 100%
+      border-radius: inherit
+      object-fit: cover

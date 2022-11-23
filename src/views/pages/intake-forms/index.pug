@@ -1,0 +1,47 @@
+extends ../../layout/_layout
+
+block var 
+
+  - title = "Intake Forms"
+
+block content
+
+  //- Date
+  
+  //- Time
+  //- Waste
+  //- Vendor
+  //- Tonnage
+  //- Receiver
+
+
+  .mb--1 
+
+    a.btn.btn--solid--sm.btn--prime(href="/intake-forms/intake") Add Entry
+
+  table.entries
+
+    thead.entry__header
+      tr
+        th Date
+        th Time
+        th Vendor
+        th Tonnage
+        th Waste
+        th Received By
+
+    tbody.entry__list
+
+      - i = 0
+
+      while i++ < 20
+
+        tr.entry
+          td(class="p--050 mb--1") Jun 10, 2022
+          td(class="p--050 mb--1") 5:35 PM
+          td(class="p--050 mb--1") Bahamas Waste
+          td(class="p--050 mb--1") 2000 lbs / 1 tn
+          td(class="p--050 mb--1") Garbage
+          td(class="p--050 mb--1") G. Symonette
+
+  include ../../components/_paginate

@@ -1,0 +1,20 @@
+form#contact-form(class='[ form ]')
+
+  div(class='[ form__field ] [ flex--col mb--1 ]')
+    +label('Name', 'name','required')(class='[ mb--025 ]')
+    +input('name', 'text', 'Your Name', 'required')(class='[ px--050 py--025 ]')
+
+  div(class='[ form__field ] [ flex--col mb--1 ]')
+    +label('Email', 'email', 'required')(class='[ mb--025 ]')
+    +input('email', 'email', 'your@email.com', 'required')(class='[ px--050 py--025 ]')
+
+  div(class='[ form__field ] [ flex--col mb--1 ]')
+    +label('Message', 'message', 'required')(class='[ mb--025 ]')
+    +textarea('message', 'Say hello...')(class='[ px--050 py--025 ]')
+
+  +input('lead_source', 'hidden', false, 'required')
+  +input('lead_url', 'hidden', false, 'required')
+
+  div(class='[ flex--end ]')
+
+    input#submit(class='[ btn btn--solid--lg btn--prime ]' type='submit', value='Send')
